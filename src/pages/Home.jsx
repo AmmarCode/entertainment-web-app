@@ -113,10 +113,10 @@ const Home = ({ shows }) => {
         })}
       </section>
 
-      <h1 className="w-[210px] h-[25px] text-[20px] my-[24px] s:w-[350px] s:h-[40px] s:text-[32px] s:mt-[39px] text-pureWhite font-light leading-6 s:leading-10">
+      <h1 className="w-[210px] h-[25px] text-[20px] my-[24px] s:w-[350px] s:h-[40px] s:text-[32px] s:mt-[39px] text-pureWhite font-light leading-6 s:leading-10 md:mb-[32px]">
         Recommended for you
       </h1>
-      <section className="grid grid-cols-2 w-[343px] gap-x-[15px] gap-y-[16px] s:grid-cols-3 s:w-[719px] s:gap-[24px] md:grid-cols-4 md:w-[1240px] md:gap-[40px]">
+      <section className="grid grid-cols-2 w-[343px] gap-x-[15px] gap-y-[16px] s:grid-cols-3 s:w-[719px] s:gap-[24px] md:grid-cols-4 md:w-[1240px] md:gap-y-[32px] md:gap-x-[40px]">
         {regularShows.map((show) => {
           const imgUrl = show.thumbnail.regular.large;
           return (
@@ -185,24 +185,24 @@ const Home = ({ shows }) => {
                 <p className="opacity-[0.75] mix-blend-normal text-[11px] mt-[5px] md:text-[13px]">
                   {show.year}
                 </p>
-                <span className="w-[2px] h-[2px] mt-[12px] ml-[9px] rounded-[50%] bg-pureWhite opacity-[0.5] mix-blend-normal"></span>
+                <span className="w-[2px] h-[2px] mt-[13px] ml-[9px] rounded-[50%] bg-pureWhite opacity-[0.5] mix-blend-normal"></span>
                 {show.category === "Movie" ? (
                   <img
                     src={movieCategory}
                     alt="movie-icon"
-                    className="w-[10px] h-[10px] mt-[7px] ml-[7px] mr-[5px]"
+                    className="w-[10px] h-[10px] mt-[9px] ml-[7px] mr-[5px] md:w-[12px] md:h-[12px]"
                   />
                 ) : (
                   <img
                     src={tvCategory}
                     alt="tv-icon"
-                    className="w-[10px] h-[10px] mt-[7px] mx-[5px]"
+                    className="w-[10px] h-[10px] mt-[8px] mx-[5px] md:w-[12px] md:h-[12px]"
                   />
                 )}
                 <p className="opacity-[0.75] mix-blend-normal text-[11px] mt-[5px] md:text-[13px]">
                   {show.category}
                 </p>
-                <span className="w-[2px] h-[2px] mt-[12px] ml-[9px] rounded-[50%] bg-pureWhite opacity-[0.5] mix-blend-normal"></span>
+                <span className="w-[2px] h-[2px] mt-[13px] ml-[9px] rounded-[50%] bg-pureWhite opacity-[0.5] mix-blend-normal"></span>
                 <p className="opacity-[0.75] mix-blend-normal text-[11px] ml-[5px] mt-[5px] md:text-[13px]">
                   {show.rating}
                 </p>
