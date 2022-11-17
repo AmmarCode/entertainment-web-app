@@ -28,6 +28,10 @@
 }
 
 .nav-icon:focus {
+  outline: #FFFFFF;
+}
+
+.active-nav-icon>* {
   fill: #FFFFFF;
   outline: none;
 }
