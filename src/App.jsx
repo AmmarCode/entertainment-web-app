@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import Navbar from "./components/Navbar";
 import SearchField from "./components/SearchField";
-import SearchResultsList from "./components/SearchResultsList";
 import list from "./data.json";
 import Bookmarks from "./pages/Bookmarks";
 import Home from "./pages/Home";
@@ -69,15 +68,18 @@ const App = () => {
   };
 
   const handleToggleBookmark = (listShow) => {
-    setShows(
-      shows.map((show) => {
+    // console.log("initial bookmark state", listShow.isBookmarked);
+    setShows((previousState) => {
+      // console.log(previousState);
+      return previousState.map((show) => {
         if (show.title === listShow.title) {
           return { ...show, isBookmarked: !show.isBookmarked };
         } else {
           return show;
         }
-      })
-    );
+      });
+    });
+    // console.log("After the toggle", listShow.isBookmarked);
   };
 
   useEffect(() => {
@@ -86,7 +88,42 @@ const App = () => {
     }
   }, [searchQuery]);
 
-  useEffect(() => {}, [shows]);
+  useEffect(() => {
+    activeNav === "home" && searchQuery
+      ? setSearchResults(
+          shows.filter((show) => {
+            return show.title.toLowerCase().includes(searchQuery.toLowerCase());
+          })
+        )
+      : activeNav === "movies" && searchQuery
+      ? setSearchResults(
+          shows.filter((show) => {
+            return (
+              show.category === "Movie" &&
+              show.title.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+          })
+        )
+      : activeNav === "tv series" && searchQuery
+      ? setSearchResults(
+          shows.filter((show) => {
+            return (
+              show.category === "TV Series" &&
+              show.title.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+          })
+        )
+      : activeNav === "bookmarks" && searchQuery
+      ? setSearchResults(
+          shows.filter((show) => {
+            return (
+              show.isBookmarked &&
+              show.title.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+          })
+        )
+      : setSearchResults([]);
+  }, [shows]);
 
   return (
     <div className="mx-auto">
