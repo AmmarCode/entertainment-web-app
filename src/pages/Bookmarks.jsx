@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
-import movieCategory from "../assets/icon-category-movie.svg";
-import tvCategory from "../assets/icon-category-tv.svg";
+import movieCategory from "/assets/icon-category-movie.svg";
+import tvCategory from "/assets/icon-category-tv.svg";
 import SearchResultsList from "../components/SearchResultsList";
 
 const Bookmarks = ({
@@ -52,7 +52,7 @@ const Bookmarks = ({
                     </div>
                   </div>
                   <img
-                    src={`/src/${imgUrl}`}
+                    src={`/${imgUrl}`}
                     alt="show-thumbnail"
                     className="w-[164px] h-[110px] s:w-[220px] s:h-[140px] md:w-[280px] md:h-[174px] rounded-[8px]"
                   />
@@ -147,7 +147,7 @@ const Bookmarks = ({
                     </div>
                   </div>
                   <img
-                    src={`/src/${imgUrl}`}
+                    src={`/${imgUrl}`}
                     alt="show-thumbnail"
                     className="w-[164px] h-[110px] s:w-[220px] s:h-[140px] md:w-[280px] md:h-[174px] rounded-[8px]"
                   />

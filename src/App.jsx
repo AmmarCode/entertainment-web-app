@@ -126,7 +126,7 @@ const App = () => {
   }, [shows]);
 
   return (
-    <div className="mx-auto">
+    <div className="w-full">
       <Navbar activeNav={activeNav} handleNavIconClick={handleNavIconClick} />
       <SearchField
         searchQuery={searchQuery}

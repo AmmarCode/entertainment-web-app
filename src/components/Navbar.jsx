@@ -1,14 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logoIcon from "../assets/logo.svg";
-import imageAvatar from "../assets/image-avatar.png";
+import logoIcon from "/assets/logo.svg";
+import imageAvatar from "/assets/image-avatar.png";
 import "../index.css";
 
 const Navbar = ({ handleNavIconClick }) => {
   let activeClassName = "active-nav-icon";
   return (
     <>
-      <div className="nav-container absolute w-[375px] h-[56px] left-[0px] top-[0px] s:w-[719px] s:h-[72px] s:top-[23px] s:left-[25px] s:rounded-[10px] md:w-[96px] md:h-[960px] md:top-[32px] md:left-[32px] md:rounded-[20px] bg-semiDarkBlue"></div>
+      <div className="nav-container absolute w-[375px] h-[56px] left-[0px] top-[0px] s:w-[719px] s:h-[72px] s:top-[23px] s:left-[25px] s:rounded-[10px] md:w-[96px] md:h-[960px] md:top-[32px] md:left-[32px] md:rounded-[20px] bg-semiDarkBlue 2xl:mx-auto"></div>
       <img
         src={logoIcon}
         alt="logo"

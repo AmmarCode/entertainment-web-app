@@ -1,5 +1,5 @@
 import React from "react";
-import searchIcon from "../assets/icon-search.svg";
+import searchIcon from "/assets/icon-search.svg";
 
 const SearchField = ({
   searchQuery,
@@ -19,7 +19,7 @@ const SearchField = ({
             type="text"
             placeholder="Search for movies or TV series"
             className="absolute left-[15.56%] right-[1.17%] top-[calc(50% - 20px/2)] s:left-[14.7%] s:right-[1.05%] s:top-[calc(50% - 30px/2)] 
-                     text-[16px] opacity-[49.79%] focus:opacity-[1] text-pureWhite bg-darkBlue font-light s:text-[24px] focus:outline-none caret-red"
+                     text-[16px] opacity-[49.79%] focus:opacity-[1] text-pureWhite bg-darkBlue font-light s:text-[24px] focus:outline-none caret-red md:left-["
             value={searchQuery}
             onChange={handleSearchQuery}
           />

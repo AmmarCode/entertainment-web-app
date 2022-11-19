@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
-import movieCategory from "../assets/icon-category-movie.svg";
-import tvCategory from "../assets/icon-category-tv.svg";
+import movieCategory from "/assets/icon-category-movie.svg";
+import tvCategory from "/assets/icon-category-tv.svg";
 
 const Recommended = ({ shows, searchResults, handleToggleBookmark }) => {
   const recommendedShows = shows.filter((show) => {
@@ -12,7 +12,7 @@ const Recommended = ({ shows, searchResults, handleToggleBookmark }) => {
       <h1 className="w-[210px] h-[25px] text-[20px] my-[24px] s:w-[350px] s:h-[40px] s:text-[32px] s:mt-[39px] text-pureWhite font-light leading-6 s:leading-10 md:mb-[32px]">
         Recommended for you
       </h1>
-      <section className="grid grid-cols-2 w-[343px] gap-x-[15px] gap-y-[16px] s:grid-cols-3 s:w-[719px] s:gap-[24px] md:grid-cols-4 md:w-[1240px] md:gap-y-[32px] md:gap-x-[40px]">
+      <section className="grid grid-cols-2 w-[343px] gap-x-[15px] gap-y-[16px] s:grid-cols-3 s:w-[719px] s:gap-[24px] md:grid-cols-4 md:w-[1240px] md:gap-y-[32px] md:gap-x-[40px] 2xl:w-full 2xl:flex flex-wrap">
         {recommendedShows.map((show) => {
           const imgUrl = show.thumbnail.regular.large;
           return (
@@ -42,7 +42,7 @@ const Recommended = ({ shows, searchResults, handleToggleBookmark }) => {
                   </div>
                 </div>
                 <img
-                  src={`/src/${imgUrl}`}
+                  src={`/${imgUrl}`}
                   alt="show-thumbnail"
                   className="w-[164px] h-[110px] s:w-[220px] s:h-[140px] md:w-[280px] md:h-[174px] rounded-[8px]"
                 />

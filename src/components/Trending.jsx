@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
-import movieCategory from "../assets/icon-category-movie.svg";
-import tvCategory from "../assets/icon-category-tv.svg";
+import movieCategory from "/assets/icon-category-movie.svg";
+import tvCategory from "/assets/icon-category-tv.svg";
 
 const Trending = ({ shows, handleToggleBookmark }) => {
   let trendingShows = shows.filter((show) => {
@@ -13,7 +13,7 @@ const Trending = ({ shows, handleToggleBookmark }) => {
       <h1 className="text-[20px] s:text-[32px] text-pureWhite font-light leading-6 s:leading-10">
         Trending
       </h1>
-      <section className="flex flex-row gap-[16px] w-full h-full mt-[16px] s:gap-8  s:mt-[25px] md:w-[1240px] md:gap-[40px] lg:min-w-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide">
+      <section className="flex flex-row gap-[16px]   mt-[16px] s:gap-8  s:mt-[25px] md:w-[1240px] md:gap-[40px] lg:min-w-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide 2xl:w-full">
         {trendingShows.map((show) => {
           const imgUrl = show.thumbnail.trending.large;
           return (
@@ -39,7 +39,7 @@ const Trending = ({ shows, handleToggleBookmark }) => {
                   </div>
                 </div>
                 <img
-                  src={`./src/${imgUrl}`}
+                  src={`/${imgUrl}`}
                   alt="trending-show-thumbnail"
                   className="w-[240px] h-[140px] s:w-[470px] s:h-[230px] rounded-[8px]"
                 />
